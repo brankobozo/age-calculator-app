@@ -1,5 +1,4 @@
 /* 
-# Front-end Style Guide
 
 ## Layout
 
@@ -8,20 +7,6 @@ The designs were created to the following widths:
 - Mobile: 375px
 - Desktop: 1440px
 
-## Colors
-
-### Primary
-
-- Purple: hsl(259, 100%, 65%)
-- Light red: hsl(0, 100%, 67%)
-
-### Neutral
-
-- White: hsl(0, 0%, 100%)
-- Off white: hsl(0, 0%, 94%)
-- Light grey: hsl(0, 0%, 86%)
-- Smokey grey: hsl(0, 1%, 44%)
-- Off black: hsl(0, 0%, 8%)
 
 ## Typography
 
@@ -34,13 +19,179 @@ The designs were created to the following widths:
 - Family: [Poppins](https://fonts.google.com/specimen/Poppins)
 - Weights: 400i, 700, 800i
 */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
 
-/***********************
-**** ATTRIBUTION */
+/* min css reset and variables
+============================= */
+:root {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+
+  --main-color: hsl(259, 100%, 65%);
+  --secondary-color: hsl(0, 100%, 67%);
+
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --off-black: hsl(0, 0%, 8%);
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  font-family: inherit;
+}
+img {
+  vertical-align: middle;
+}
+body,
+p {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+/* reset def outline */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input:focus,
+button:focus {
+  outline: none;
+}
+
+/* base
+============================= */
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  padding-block-start: 3em;
+  background-color: var(--light-grey);
+}
+
+/* app
+============================= */
+.app {
+  max-width: 375px;
+  padding: 3em 1.5em;
+  border-radius: 2em;
+  border-bottom-right-radius: 7em;
+  background-color: var(--white);
+  color: var(--smokey-grey);
+}
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1em;
+  padding-bottom: 5em;
+  margin-bottom: 5em;
+  border-bottom: 2px solid var(--light-grey);
+  font-weight: 700;
+  position: relative;
+}
+.calculator__label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+.calculator__input {
+  display: block;
+  width: 100%;
+  padding: 0.6em 0 0.6em 0.6em;
+  margin-top: 0.3rem;
+  border: 2px solid var(--light-grey);
+  border-radius: 0.5em;
+  font-size: 1.3rem;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  color: var(--off-black);
+  cursor: pointer;
+}
+.calculator__input:focus {
+  border-color: var(--main-color);
+}
+.display {
+  font-size: 3.75rem;
+}
+.display__row {
+  margin-block: -0.3em;
+  color: var(--off-black);
+  font-weight: 800;
+  font-style: italic;
+}
+.display__row:first-child {
+  margin-top: 0;
+}
+.display__row:last-child {
+  margin-bottom: 0;
+}
+.display__row span {
+  color: var(--main-color);
+}
+.btn {
+  grid-column: 1/4;
+  justify-self: center;
+  border: none;
+  width: 75px;
+  height: 75px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  bottom: -37.5px;
+}
+
+.btn:hover {
+  background-color: var(--off-black);
+}
+
+/* attribution
+============================= */
 .attribution {
+  margin-top: 2em;
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 960px) {
+  .app {
+    max-width: 100%;
+    padding: 3.75em;
+    padding-bottom: 2em;
+    border-bottom-right-radius: 12em;
+  }
+  .calculator {
+    grid-template-columns: 160px 160px 160px 145px;
+    column-gap: 2em;
+    padding-bottom: 3.2em;
+    margin-bottom: 1em;
+  }
+  .calculator__label {
+    font-size: 1rem;
+  }
+  .calculator__input {
+    padding-block: 0.35em;
+    font-size: 2rem;
+  }
+  .display__row {
+    font-size: 7rem;
+    margin-block: -0.5em;
+  }
+
+  .btn {
+    grid-column: 1/5;
+    right: 0;
+    bottom: -47.5px;
+    width: 95px;
+    height: 95px;
+  }
 }
