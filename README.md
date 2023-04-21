@@ -19,22 +19,22 @@ Users should be able to:
 - See hover and focus states for all interactive elements on the page
 - **Bonus**: See the age numbers animate to their final number when the form is submitted
 
-<!-- ## Links
+## Links
 
-- [Code](https://github.com/brankobozo/tip-calculator-app)
-- [live](https://brankobozo.github.io/tip-calculator-app/)
+- [Code](https://github.com/brankobozo/age-calculator-app)
+- [live](https://brankobozo.github.io/age-calculator-app/)
 
 ## Tools
 
 - Semantic HTML5 markup
-- JS Classes
-- CSS Grid and flexbox
 - CSS Custom properties
+- VanillaJS Dates
 
 ## Screenshots
 
-![picture alt](images/screenshots/mobile.png "Tip calculator app mobile screenshot")
-![picture alt](images/screenshots/tablet.png "Tip calculator app tablet screenshot")
-![picture alt](images/screenshots/desktop.png "Tip calculator app desktop screenshot")
-![picture alt](images/screenshots/desktop-active.png "Tip calculator app desktop active state screenshot")
-![picture alt](images/screenshots/desktop-error.png "Tip calculator app desktop error state screenshot") -->
+![picture alt](images/screenshots/mobile.png "Age calculator app mobile screenshot")
+![picture alt](images/screenshots/mobile-display.png "Age calculator app mobile display screenshot")
+![picture alt](images/screenshots/mobile-error.png "Age calculator app mobile error screenshot")
+![picture alt](images/screenshots/desktop.png "Age calculator app desktop screenshot")
+![picture alt](images/screenshots/desktop-display.png "Age calculator app desktop display screenshot")
+![picture alt](images/screenshots/desktop-error.png "Age calculator app desktop error  screenshot")

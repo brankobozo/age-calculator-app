@@ -1,24 +1,3 @@
-/* 
-
-## Layout
-
-The designs were created to the following widths:
-
-- Mobile: 375px
-- Desktop: 1440px
-
-
-## Typography
-
-### Body Copy
-
-- Font size (inputs): 32px
-
-### Font
-
-- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
-- Weights: 400i, 700, 800i
-*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
 
 /* min css reset and variables
