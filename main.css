@@ -151,6 +151,17 @@ body {
   background-color: var(--off-black);
 }
 
+small {
+  font-size: 0.75rem;
+  font-weight: 400;
+  font-style: italic;
+}
+.error {
+  color: var(--secondary-color);
+}
+.error input {
+  border-color: var(--secondary-color);
+}
 /* attribution
 ============================= */
 .attribution {
