@@ -75,8 +75,27 @@ const checkYear = year => {
   }
   return valid;
 };
+
+// BONUS (used function from css tricks)
+const animateNum = function (obj, start, end, duration) {
+  let startTimestamp = null;
+  const step = timestamp => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    obj.innerHTML = Math.floor(progress * (end - start) + start);
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    }
+  };
+  window.requestAnimationFrame(step);
+};
+
 btn.addEventListener("click", function (e) {
   e.preventDefault();
+
+  const valueDay = document.getElementById("yy");
+  const valueMonth = document.getElementById("mm");
+  const valueYear = document.getElementById("dd");
 
   const day = inputDay.value;
   const month = inputMonth.value;
@@ -96,7 +115,11 @@ btn.addEventListener("click", function (e) {
 
   if (!dayValid || !monthValid || !yearValid) return;
 
-  document.getElementById("yy").textContent = diffYear;
-  document.getElementById("mm").textContent = diffMonth;
-  document.getElementById("dd").textContent = diffDay;
+  valueYear.textContent = diffYear;
+  valueMonth.textContent = diffMonth;
+  valueDay.textContent = diffDay;
+
+  animateNum(valueYear, 0, diffYear, 500);
+  animateNum(valueMonth, 0, diffMonth, 500);
+  animateNum(valueDay, 0, diffDay, 500);
 });
